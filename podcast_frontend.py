@@ -38,18 +38,19 @@ def main():
             st.image(podcast_info['podcast_details']['episode_image'], caption="Podcast Cover", width=300, use_column_width=True)
 
         # Display the podcast guest and their details in a side-by-side layout
-        col3, col4 = st.columns([3, 7])
+        col3, col4, col5 = st.columns([3,3, 4])
 
         with col3:
             st.subheader("Podcast Guest")
             st.write(podcast_info['podcast_guest'])
-            
-            
 
+        
         with col4:
+            st.subheader("Podcast Guest Organization")
+            st.write(podcast_info["podcast_guest_org"])
+        with col5:
             st.subheader("Podcast Guest Details")
-            st.write(podcast_info["podcast_guest"])
-
+            st.write(podcast_info["podcastGuest"])
         # Display the five key moments
         st.subheader("Key Moments")
         key_moments = podcast_info['podcast_highlights']
@@ -88,15 +89,19 @@ def main():
             st.image(podcast_info['podcast_details']['episode_image'], caption="Podcast Cover", width=300, use_column_width=True)
 
         # Display the podcast guest and their details in a side-by-side layout
-        col3, col4 = st.columns([3, 7])
+        col3, col4, col5 = st.columns([3,3, 4])
 
         with col3:
             st.subheader("Podcast Guest")
             st.write(podcast_info['podcast_guest'])
 
+        
         with col4:
+            st.subheader("Podcast Guest Organization")
+            st.write(podcast_info["podcast_guest_org"])
+        with col5:
             st.subheader("Podcast Guest Details")
-            st.write(podcast_info["podcast_guest"])
+            st.write(podcast_info["podcastGuest"])
 
         # Display the five key moments
         st.subheader("Key Moments")
